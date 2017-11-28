@@ -1,10 +1,10 @@
 ###This is the config file of env and workloads configurations
 
 ###env configurations
-HADOOP_HOME=/hadoop_dir
-SPARK_HOME=/home/zc/sparkdir/spark_platforms/
-SPARK_BENCH_HOME=/home/zc/bryantchang/SparkBench
-DATA_HDFS_BASE=hdfs://centos26:9000/BryantChang/SparkBench
+HADOOP_HOME=/home/hadoop/bryantchang/platforms/hadoop-2.7.0
+SPARK_HOME=/home/hadoop/bryantchang/platforms/Spark_Master
+SPARK_BENCH_HOME=/home/hadoop/bryantchang/codes/SparkBench
+DATA_HDFS_BASE=hdfs://spark1:9000/BryantChang/SparkBench
 LAB_CONFIG_DIR=/usr/home/Bryant_Chang/scripts/workload-gen/config/experiment_config
 
 
