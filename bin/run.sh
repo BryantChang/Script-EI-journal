@@ -18,6 +18,7 @@ LIBS="${DIR}/libs"
 BIN="${DIR}/bin"
 CONF="${DIR}/conf"
 SCRIPT_TO_RUN="${DIR}/scripts_to_run"
+LOG_DIR="${DIR}/logs"
 
 
 ##source the env
@@ -60,6 +61,8 @@ esac
 
 mkdir -p $log_dir
 
+
+cd ${log_dir}
 ##delete file if exist logs
 file_count=`ls -al  *.log | grep "^-" | wc -l`
 
@@ -69,5 +72,5 @@ fi
 
 chmod +x $SCRIPT_TO_RUN/testScript.sh
 
-sh $SCRIPT_TO_RUN/testScript.sh
+nohup sh $SCRIPT_TO_RUN/testScript.sh >> ${LOG_DIR}/${exp_type}.log &
 
