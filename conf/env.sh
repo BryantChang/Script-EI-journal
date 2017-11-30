@@ -10,9 +10,9 @@ DEF_SMALL_BASE=/home/hadoop/bryantchang/codes/SparkBench/logs/DEF_SMALL
 
 
 
-WORKLOAD_CONF=/home/hadoop/bryantchang/tools/script-ei/conf/workloadConf.sh
-COMMON_CONF=/home/hadoop/bryantchang/tools/script-ei/conf/commonConf.sh
-SCRIPT_TO_RUN_FILE=/home/hadoop/bryantchang/tools/script-ei/scripts_to_run/testScript.sh
+WORKLOAD_CONF=/home/hadoop/bryantchang/tools/script_ei/conf/workloadConf.sh
+COMMON_CONF=/home/hadoop/bryantchang/tools/script_ei/conf/commonConf.sh
+SCRIPT_TO_RUN_FILE=/home/hadoop/bryantchang/tools/script_ei/scripts_to_run/testScript.sh
 WORKLOAD_NUM=12
 COMBINE_NUM=2
 SLEEP_IN_GROUP=1
