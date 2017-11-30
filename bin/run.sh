@@ -72,7 +72,7 @@ fi
 
 chmod +x $SCRIPT_TO_RUN/testScript.sh
 
-hadoop fs -rmr /eventLogs
+hadoop fs -rmr /eventLogs/*
 
 nohup sh $SCRIPT_TO_RUN/testScript.sh >> ${LOG_DIR}/${exp_type}.log &
 
