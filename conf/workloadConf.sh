@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 1=SVDPlusPlus
 2=PageRank
 # 3=TriangleCount

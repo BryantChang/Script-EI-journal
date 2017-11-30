@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ###This is the config file of env and workloads configurations
 
 ###env configurations
