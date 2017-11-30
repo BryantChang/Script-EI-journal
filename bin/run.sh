@@ -71,6 +71,7 @@ if [[ ${file_count} -ne 0 ]]; then
     rm -rf *.log
 fi
 
+chmod +x ${BIN}/generate_script.sh
 ${BIN}/generate_script.sh ${exp_type}
 
 chmod +x ${SCRIPT_TO_RUN}testScript.sh
