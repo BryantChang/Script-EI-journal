@@ -4,7 +4,10 @@ function usage() {
     echo "Usage: $0 <expType>"
 }
 
-#function ill
+function incorrect_params() {
+    echo "The exp_type must be one of (WSMC_BIG|
+    WSMC_MID|WSMC_SMALL|DEF_BIG|DEF_MID|DEF_SMALL)"
+}
 
 ##get the current path and initialize some constant values
 bin=`dirname "$0"`
@@ -20,6 +23,11 @@ SCRIPT_TO_RUN="${DIR}/scripts_to_run"
 ##source the env
 . "${CONF}/env.sh"
 
+
+if [[ $# -lt 1 ]]; then
+    usage
+    exit
+fi
 
 exp_type=$1
 
@@ -46,7 +54,8 @@ case $exp_type in
     $log_dir=$DEF_SMALL_BASE
     ;;
 *)
-    echo
+    incorrect_params
+    exit
 esac
 
 mkdir -p $log_dir
