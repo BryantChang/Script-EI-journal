@@ -20,13 +20,13 @@ LAB_CONFIG_DIR=/usr/home/Bryant_Chang/scripts/workload-gen/config/experiment_con
 pagerank_executable_basedir=PageRank/bin
 pagerank_config_basedir=PageRank/conf
 PAGERANK_INPUT_SIZE=300
-MEM_PAGERANK=1600
+MEM_PAGERANK=1700
 
 ###SVD++###
 svdpp_executable_basedir=SVDPlusPlus/bin
 svdpp_config_basedir=SVDPlusPlus/conf
 SVDPP_INPUT_SIZE=300
-MEM_SVDPP=1460
+MEM_SVDPP=1600
 
 ###TriangleCount###
 tc_executable_basedir=TriangleCount/bin
