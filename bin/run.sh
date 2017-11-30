@@ -64,13 +64,15 @@ mkdir -p $log_dir
 
 cd ${log_dir}
 ##delete file if exist logs
-file_count=`ls -al  *.log | grep "^-" | wc -l`
+file_count=`ls -al | grep "^-" | wc -l`
 
 if [[ $file_count -ne 0 ]]; then
     rm -rf *.log
 fi
 
 chmod +x $SCRIPT_TO_RUN/testScript.sh
+
+
 
 nohup sh $SCRIPT_TO_RUN/testScript.sh >> ${LOG_DIR}/${exp_type}.log &
 
