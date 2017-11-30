@@ -28,6 +28,9 @@ exp_type=$1
 
 OPT="--confW ${WORKLOAD_CONF} --confC ${COMMON_CONF} --dest ${SCRIPT_TO_RUN_FILE} --wcount ${WORKLOAD_NUM} --ccount ${COMBINE_NUM} --expType ${exp_type} --ingroup ${SLEEP_IN_GROUPS} --begroup ${SLEEP_BETWEEN_GROUPS} --useHistory ${USE_HISTORY} --historyFile ${HISTORY_FILE}"
 
+
+echo ${OPT}
+
 echo "generating scripts"
 
 java -classpath ${LIBS}/mix_workload_generator.jar com.bryant.generator.GenWorkload ${OPT}
