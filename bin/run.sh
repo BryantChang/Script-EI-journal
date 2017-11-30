@@ -36,22 +36,22 @@ echo "create the directories"
 log_dir=""
 case $exp_type in
 "WSMC_BIG")
-    $log_dir=$WSMC_BIG_BASE
+    log_dir=$WSMC_BIG_BASE
     ;;
 "WSMC_MID")
-    $log_dir=$WSMC_MID_BASE
+    log_dir=$WSMC_MID_BASE
     ;;
 "WSMC_SMALL")
-    $log_dir=$WSMC_SMALL_BASE
+    log_dir=$WSMC_SMALL_BASE
     ;;
 "DEF_BIG")
-    $log_dir=$DEF_BIG_BASE
+    log_dir=$DEF_BIG_BASE
     ;;
 "DEF_MID")
-    $log_dir=$DEF_MID_BASE
+    log_dir=$DEF_MID_BASE
     ;;
 "DEF_SMALL")
-    $log_dir=$DEF_SMALL_BASE
+    log_dir=$DEF_SMALL_BASE
     ;;
 *)
     incorrect_params
