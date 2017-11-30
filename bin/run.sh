@@ -61,6 +61,7 @@ esac
 
 mkdir -p $log_dir
 
+execute_log=${LOG_DIR}/${exp_type}.log
 
 cd ${log_dir}
 ##delete file if exist logs
@@ -74,5 +75,9 @@ chmod +x $SCRIPT_TO_RUN/testScript.sh
 
 hadoop fs -rmr /eventLogs/*
 
-nohup sh $SCRIPT_TO_RUN/testScript.sh >> ${LOG_DIR}/${exp_type}.log &
+if [[ -f $execute_log ]]; then
+    rm -rf $execute_log
+fi
+
+nohup sh $SCRIPT_TO_RUN/testScript.sh >> $execute_log &
 
