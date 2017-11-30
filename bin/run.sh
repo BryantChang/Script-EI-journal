@@ -67,11 +67,13 @@ cd ${log_dir}
 ##delete file if exist logs
 file_count=`ls -al | grep "^-" | wc -l`
 
-if [[ $file_count -ne 0 ]]; then
+if [[ ${file_count} -ne 0 ]]; then
     rm -rf *.log
 fi
 
-chmod +x $SCRIPT_TO_RUN/testScript.sh
+${BIN}/generate_script.sh ${exp_type}
+
+chmod +x ${SCRIPT_TO_RUN}testScript.sh
 
 hadoop fs -rmr /eventLogs/*
 
@@ -79,5 +81,5 @@ if [[ -f $execute_log ]]; then
     rm -rf $execute_log
 fi
 
-nohup sh $SCRIPT_TO_RUN/testScript.sh >> $execute_log &
+#nohup sh $SCRIPT_TO_RUN/testScript.sh >> $execute_log &
 
