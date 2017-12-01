@@ -35,8 +35,8 @@ TC_INPUT_SIZE=600
 MEM_TC=1640
 
 ###ShortestPath###
-sp_executable_basedir=ShortestPath/bin
-sp_config_basedir=ShortestPath/conf
+sp_executable_basedir=ShortestPaths/bin
+sp_config_basedir=ShortestPaths/conf
 SP_INPUT_SIZE=600
 MEM_SP=1280
 
