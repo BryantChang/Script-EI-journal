@@ -82,5 +82,5 @@ if [[ -f $execute_log ]]; then
     rm -rf $execute_log
 fi
 
-#nohup sh $SCRIPT_TO_RUN/testScript.sh >> $execute_log &
+nohup sh $SCRIPT_TO_RUN/testScript.sh >> $execute_log &
 
