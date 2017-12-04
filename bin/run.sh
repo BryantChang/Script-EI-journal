@@ -35,31 +35,16 @@ exp_type=$1
 echo "create the directories"
 
 log_dir=""
-case $exp_type in
-"WSMC_BIG")
-    log_dir=$WSMC_BIG_BASE
-    ;;
-"WSMC_MID")
-    log_dir=$WSMC_MID_BASE
-    ;;
-"WSMC_SMALL")
-    log_dir=$WSMC_SMALL_BASE
-    ;;
-"DEF_BIG")
-    log_dir=$DEF_BIG_BASE
-    ;;
-"DEF_MID")
-    log_dir=$DEF_MID_BASE
-    ;;
-"DEF_SMALL")
-    log_dir=$DEF_SMALL_BASE
+case ${exp_type} in
+"WSMC_BIG"|"WSMC_MID"|"WSMC_SMALL"|"DEF_BIG"|"DEF_MID"|"DEF_SMALL")
+    log_dir=${RES_LOG_BASE}/${exp_type}
     ;;
 *)
     incorrect_params
     exit
 esac
 
-mkdir -p $log_dir
+mkdir -p ${log_dir}
 
 execute_log=${LOG_DIR}/${exp_type}.log
 
@@ -78,9 +63,9 @@ chmod +x ${SCRIPT_TO_RUN}/testScript.sh
 
 hadoop fs -rmr /eventLogs/*
 
-if [[ -f $execute_log ]]; then
-    rm -rf $execute_log
+if [[ -f ${execute_log} ]]; then
+    rm -rf ${execute_log}
 fi
 
-nohup sh $SCRIPT_TO_RUN/testScript.sh >> $execute_log &
+nohup sh ${SCRIPT_TO_RUN}/testScript.sh >> ${execute_log} &
 

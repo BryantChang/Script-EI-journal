@@ -1,14 +1,10 @@
 #!/bin/bash
 
 RES_LOG_BASE=/home/hadoop/bryantchang/codes/SparkBench/logs
-WSMC_BIG_BASE=/home/hadoop/bryantchang/codes/SparkBench/logs/WSMC_BIG
-WSMC_MID_BASE=/home/hadoop/bryantchang/codes/SparkBench/logs/WSMC_MID
-WSMC_SMALL_BASE=/home/hadoop/bryantchang/codes/SparkBench/logs/WSMC_SMALL
-DEF_BIG_BASE=/home/hadoop/bryantchang/codes/SparkBench/logs/DEF_BIG
-DEF_MID_BASE=/home/hadoop/bryantchang/codes/SparkBench/logs/DEF_MID
-DEF_SMALL_BASE=/home/hadoop/bryantchang/codes/SparkBench/logs/DEF_SMALL
 
 
+ANALYSE_LOG_BASE=/Users/bryantchang/Desktop/study/Research/experiment/for_remote/sparkbench
+ANALYSE_RES_BASE=/Users/bryantchang/Desktop/study/Research/experiment/for_remote/sparkbench/result
 
 WORKLOAD_CONF=/home/hadoop/bryantchang/tools/script_ei/conf/workloadConf.sh
 COMMON_CONF=/home/hadoop/bryantchang/tools/script_ei/conf/commonConf.sh
